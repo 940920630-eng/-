@@ -1,8 +1,35 @@
 import React from 'react';
 import { PolicyDocument } from './types';
-import { BookOpen, Briefcase, Calculator, Building, Cpu, Wrench, Calendar, Award } from 'lucide-react';
+import { BookOpen, Briefcase, Calculator, Building, Cpu, Wrench, Calendar, Award, GraduationCap } from 'lucide-react';
 
 export const MOCK_POLICIES: PolicyDocument[] = [
+  {
+    id: '12',
+    title: '江苏省环境工程专业高级职称评审评分表',
+    category: '工程系列',
+    publishDate: '2023-06-01',
+    department: '江苏省人社厅',
+    description: '详细列出了环境工程专业高级职称评审的量化评分标准，包括业绩成果（75分）、论文著作（25分）及荣誉加分（5分）的具体细则。',
+    link: '#'
+  },
+  {
+    id: '10',
+    title: '关于在工程技术领域实现高技能人才与工程技术人才职业发展贯通的意见（试行）',
+    category: '技能贯通',
+    publishDate: '2018-11-28',
+    department: '人社部',
+    description: '打破职业技能评价与专业技术职称评审界限，获得高级技师等职业资格可直接申报工程师或高级工程师职称。',
+    link: 'http://www.mohrss.gov.cn/xxgk2020/fdzdgknr/zcfg/gfxwj/rcrs/201811/t20181128_305869.html'
+  },
+  {
+    id: '11',
+    title: '关于进一步做好民营企业职称工作的通知及相关答复',
+    category: '民营企业',
+    publishDate: '2019-12-06',
+    department: '人社部',
+    description: '破除“唯论文、唯学历”倾向，明确民营企业人才在职称评审中可享有绿色通道，以专利、项目、案例代替论文。',
+    link: 'http://www.mohrss.gov.cn/xxgk2020/fdzdgknr/zhgl/jytabl/tadf/201912/t20191206_345525.html'
+  },
   {
     id: '9',
     title: '江苏省专业技术类职业资格和职称对应目录',
@@ -87,6 +114,8 @@ export const MOCK_POLICIES: PolicyDocument[] = [
 ];
 
 export const CATEGORY_ICONS: Record<string, React.ReactNode> = {
+  '技能贯通': <GraduationCap size={20} />,
+  '民营企业': <Briefcase size={20} />,
   '资格对应': <Award size={20} />,
   '申报指南': <Calendar size={20} />,
   '工程系列': <Wrench size={20} />,
@@ -98,9 +127,9 @@ export const CATEGORY_ICONS: Record<string, React.ReactNode> = {
 };
 
 export const SAMPLE_QUESTIONS = [
-  "一级建造师可以直接对应中级工程师吗？",
-  "硕士学历可以直接初定中级工程师吗？",
-  "各城市职称初定申报时间是什么时候？",
-  "建设工程专业申报高级职称的学历和年限要求是什么？",
-  "2024年江苏省继续教育学时有什么新规定？"
+  "环境工程高级职称评分标准是什么？",
+  "发明专利在环境工程评审中加多少分？",
+  "高级技师可以直接申报高级工程师吗？",
+  "民营企业申报职称还需要发表论文吗？",
+  "一级建造师可以直接对应中级工程师吗？"
 ];
